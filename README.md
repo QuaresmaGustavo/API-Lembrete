@@ -4,7 +4,7 @@
     - Foi decidido criar uma API Web RESTful usando ASP.NET devido às preferências exigidas pelo teste. Para a visualização e consumo da API, foi decidido o uso do React, e para o armazenamento dos dados, foi decidido o uso do banco de dados MySQL.
 
 * Instruções para executar o sistema: 
-   - React: Como o projeto é local, para executar o React, deve-se abrir o terminal e digitar o comando "npm run dev";
+   - React: Como o projeto é local, para executar o React, deve-se abrir o terminal e digitar o comando "npm install" e em seguida o comando "npm run dev";
      
    - C#: Como o projeto é local, deve se abrir o arquivo "LembreteAPI.sln" e executar a aplicação em "http";
      
