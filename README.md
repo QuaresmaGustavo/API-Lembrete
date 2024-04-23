@@ -10,4 +10,4 @@
      
   ![image](https://github.com/QuaresmaGustavo/API-Lembrete/assets/126203767/350b1b57-169a-42f0-8c2a-25b397f07792)
 
-   - MySQL: No "appsettings.json", em "ConnectionMySql", deve-se alterar o "uid" e "pwd" para o devido usuário e senha do seu banco de dados. Em seguida, deve-se digitar no "Console do gerenciador de pacotes" (terminal) o comando "update-database" para que seja criado o banco de dados "db_lembrete" e a tabela "Lembrete".
+   - MySQL: Deve-se digitar no "Console do gerenciador de pacotes" (terminal) o comando "update-database" para que seja criado o banco de dados "db_lembrete" e a tabela "Lembrete".
