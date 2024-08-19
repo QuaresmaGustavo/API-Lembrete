@@ -2,59 +2,68 @@ import { useState } from 'react';
 import styled from 'styled-components';
 
 const CardLembrete = styled.div`
-max-width:40rem;
-margin: 4rem 0;
-padding: 2rem 2rem;
-border: solid gray 0.1rem;
-border-radius: 1rem;
+  position: fixed;
+  left: 2rem;
+  max-width: 40rem;
+  margin: 4rem 0;
+  padding: 2rem 2rem;
+  border: solid gray 0.1rem;
+  border-radius: 1rem;
+  background: rgb(47, 152, 194);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 
-h1{
-  border-bottom: solid gray 0.1rem;
-}
+  h1{
+    border-bottom: solid rgba(0, 0, 0, 0.2) 0.1rem;
+  }
 `;
 
 const Button = styled.button`
-border-radius: 8px;
-border: 1px solid transparent;
-font-size: 1em;
-font-weight: 500;
-background-color: #db1d1d;
-cursor: pointer;
-transition: border-color 0.25s;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 1em;
+  font-weight: 500;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+
+   &:hover {
+    background-color: rgb(145, 145, 145);
+    transform: scale(1.05);
+    transition: ease-out 200ms;
+  }
 `;
 
 const Inputs = styled.div`
-display: flex;
-flex-direction: column;
-
-input{
-  height: 1.6rem;
-  margin-bottom: 1.2rem;
-}`;
+  display: flex;
+  flex-direction: column;`;
 
 const Input = styled.input`
   height: 1.6rem;
-  margin-bottom: 1.2rem;`;
+  margin-bottom: 1.2rem;
+  padding: 0rem 0.5rem;
+  background-color: transparent;
+  border: transparent;
+  border-bottom: solid rgba(0, 0, 0, 0.2) 0.1rem;
+
+  &::placeholder {
+    color: black;
+  }
+
+  &: focus {
+    outline: none;
+  }
+  `;
 
 function NewLembrete() {
 
   const [inputData, setInputData] = useState('');
   const [inputNome, setInputNome] = useState('');
-
-  const valueInputNome = (e) => {
-    setInputNome(e.target.value);
-  };
-
   const hoje = new Date().toISOString().split('T')[0];
-
-  const valueInputData = (e) => {
-    setInputData(e.target.value);
-  };
 
   const postLembrete = async () => {
     if (inputNome && inputData != '') {
       try {
-        const response = await fetch('http://localhost:5260/insert', {
+        await fetch('http://localhost:5260/insert', {
           method: 'POST',
           headers: { 'content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
           body: JSON.stringify({
@@ -62,10 +71,6 @@ function NewLembrete() {
             data: inputData
           }),
         });
-
-        if (!response.ok) {
-          alert('Erro ao enviar os dados');
-        }
         window.location.reload();
       } catch (error) {
         console.error('Erro no POST', error);
@@ -79,11 +84,11 @@ function NewLembrete() {
     <CardLembrete>
       <h1>Novo Lembrete</h1>
       <Inputs className="card">
-        <Input type="text" placeholder='Lembrete' value={inputNome} onChange={valueInputNome} />
-        <Input type="date" placeholder='Data' value={inputData} onChange={valueInputData} min={hoje}/>
+        <Input type="text" placeholder='Lembrete' value={inputNome} onChange={(e) => setInputNome(e.target.value)} />
+        <Input type="date" placeholder='Data' value={inputData} onChange={(e) => setInputData(e.target.value)} min={hoje} />
       </Inputs>
       <Button type='submit' onClick={postLembrete}>
-        Criar
+        Adicionar
       </Button>
     </CardLembrete>
   )

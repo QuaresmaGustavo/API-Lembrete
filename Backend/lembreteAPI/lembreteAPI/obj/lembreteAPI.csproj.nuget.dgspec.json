@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\quare\\source\\repos\\LembreteAPI\\lembreteAPI\\lembreteAPI.csproj": {}
+    "C:\\Users\\quare\\.vscode\\Projetos\\API-Lembrete\\Backend\\lembreteAPI\\lembreteAPI\\lembreteAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\quare\\source\\repos\\LembreteAPI\\lembreteAPI\\lembreteAPI.csproj": {
+    "C:\\Users\\quare\\.vscode\\Projetos\\API-Lembrete\\Backend\\lembreteAPI\\lembreteAPI\\lembreteAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\quare\\source\\repos\\LembreteAPI\\lembreteAPI\\lembreteAPI.csproj",
+        "projectUniqueName": "C:\\Users\\quare\\.vscode\\Projetos\\API-Lembrete\\Backend\\lembreteAPI\\lembreteAPI\\lembreteAPI.csproj",
         "projectName": "lembreteAPI",
-        "projectPath": "C:\\Users\\quare\\source\\repos\\LembreteAPI\\lembreteAPI\\lembreteAPI.csproj",
+        "projectPath": "C:\\Users\\quare\\.vscode\\Projetos\\API-Lembrete\\Backend\\lembreteAPI\\lembreteAPI\\lembreteAPI.csproj",
         "packagesPath": "C:\\Users\\quare\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\quare\\source\\repos\\LembreteAPI\\lembreteAPI\\obj\\",
+        "outputPath": "C:\\Users\\quare\\.vscode\\Projetos\\API-Lembrete\\Backend\\lembreteAPI\\lembreteAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\quare\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -93,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

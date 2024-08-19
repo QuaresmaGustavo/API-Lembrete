@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QkK743LV6I3w0HCVLx3+qoH2hVnJ4dxsqpaXVhJlphgc/9SFWpeEIgjIV3gXCBkN5TJyXtxPp9fTevZ4uyfy9Q==",
+  "dgSpecHash": "lzf37WyX9lY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\quare\\source\\repos\\LembreteAPI\\lembreteAPI\\lembreteAPI.csproj",
+  "projectFilePath": "C:\\Users\\quare\\.vscode\\Projetos\\API-Lembrete\\Backend\\lembreteAPI\\lembreteAPI\\lembreteAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\quare\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\quare\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

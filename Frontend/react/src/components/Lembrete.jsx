@@ -36,58 +36,97 @@ function Lembrete() {
                 }
             });
             if (response.ok) {
-                window.location.reload();
+                setLembretes(lembretes.filter(lembrete => lembrete.id !== id));
             }
         } catch (e) {
             alert('Erro ao deletar lembrete!');
         }
     }
 
+    const Lembretes = styled.div`
+        h2{
+            font-weight: 500;
+        }
+
+        .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }`;
+
+
     const Lembrete = styled.div`
+        p{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #keep{
+            margin-left: 1rem;
+        }
+
         label{
-            padding-left: 4rem;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            padding: 0rem 0.5rem;
+            border-bottom: solid rgba(0, 0, 0, 0.2) 0.1rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            word-break: break-word;
         }`;
 
     const Button = styled.button`
-    border-radius: 50%;
-    border: 1px solid transparent;
-    font-size: 1em;
-    font-weight: 500;
-    background-color: #db1d1d;
-    margin-left: 0.5rem;
-    cursor: pointer;
-    transition: border-color 0.25s`;
+        border: 1px solid transparent;
+        background-color: transparent;
+
+        cursor: pointer;
+        
+        &: hover {
+            color: #EA3323;
+            transition: ease-out 300ms;
+        }`;
 
     const agruparPorData = {};
 
-        if(lembretes != ''){
-            lembretes.forEach(lembrete => {
-                if (agruparPorData[lembrete.data]) {
-                    agruparPorData[lembrete.data].push(lembrete);
-                } else {
-                    agruparPorData[lembrete.data] = [lembrete];
-                }
-            });
-        }
+    if (lembretes != '') {
+        lembretes.forEach(lembrete => {
+            (agruparPorData[lembrete.data]) ? agruparPorData[lembrete.data].push(lembrete) : agruparPorData[lembrete.data] = [lembrete];
+        });
+    }
 
-        const dataOrdenada = Object.keys(agruparPorData).sort((a, b) => new Date(a) - new Date(b));
+    const dataOrdenada = Object.keys(agruparPorData).sort((a, b) => new Date(a) - new Date(b));
 
     return (
-        <Lembrete>
-            {dataOrdenada.map((data)=>(
-                <div key={data}>
-                <h2>{data}</h2>
-                {agruparPorData[data].map((lembrete) => (
-                    <div key={lembrete.id}>
-                        <p>
-                            <label>{lembrete.nome}</label>
-                            <Button type='submit' onClick={() => deleteLembrete(lembrete.id)}>x</Button>
-                        </p>
+        <Lembretes>
+            {dataOrdenada.map((data) => {
+                const dataFormatada = new Date(data).toLocaleDateString('pt-BR', { timeZone: 'UTC' });
+                return (
+                    <div key={data}>
+                        <h2>{dataFormatada}</h2>
+                        {agruparPorData[data].map((lembrete) => (
+                            <Lembrete key={lembrete.id}>
+                                <p>
+                                    <span class="material-symbols-outlined" id="keep">
+                                        keep
+                                    </span>
+                                    <label>{lembrete.nome}</label>
+                                    <Button type='submit' onClick={() => deleteLembrete(lembrete.id)}>
+                                        <span class="material-symbols-outlined">
+                                            delete
+                                        </span>
+                                    </Button>
+                                </p>
+                            </Lembrete>
+                        ))}
                     </div>
-                ))}
-            </div>
-            ))}
-        </Lembrete>
+                )
+            })}
+        </Lembretes>
     )
 }
 
