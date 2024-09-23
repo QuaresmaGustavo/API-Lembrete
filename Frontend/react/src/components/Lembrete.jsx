@@ -8,7 +8,7 @@ function Lembrete() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('http://localhost:5260/all', {
+                const response = await fetch('http://localhost:5260/api/Lembretes', {
                     method: 'GET',
                     headers: {
                         'content-type': 'application/json',
@@ -28,7 +28,7 @@ function Lembrete() {
 
     const deleteLembrete = async (id) => {
         try {
-            const response = await fetch(`http://localhost:5260/delete/${id}`, {
+            const response = await fetch(`http://localhost:5260/api/Lembretes?id=${id}`, {
                 method: 'DELETE',
                 headers: {
                     'content-Type': 'application/json',
@@ -56,6 +56,13 @@ function Lembrete() {
         'opsz' 24
     }`;
 
+    const LembreteContainer = styled.div`
+        background-color: white;
+        padding: 0px 2px 2px 2px;
+        margin-bottom: 5px;
+        border-radius: 8px;
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    `;
 
     const Lembrete = styled.div`
         p{
@@ -106,7 +113,7 @@ function Lembrete() {
             {dataOrdenada.map((data) => {
                 const dataFormatada = new Date(data).toLocaleDateString('pt-BR', { timeZone: 'UTC' });
                 return (
-                    <div key={data}>
+                    <LembreteContainer key={data}>
                         <h2>{dataFormatada}</h2>
                         {agruparPorData[data].map((lembrete) => (
                             <Lembrete key={lembrete.id}>
@@ -123,7 +130,7 @@ function Lembrete() {
                                 </p>
                             </Lembrete>
                         ))}
-                    </div>
+                    </LembreteContainer>
                 )
             })}
         </Lembretes>

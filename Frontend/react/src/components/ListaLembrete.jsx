@@ -12,7 +12,7 @@ export default function ListaLembrete(){
         border: solid gray 0.1rem;
         border-radius: 1rem;
         background: rgb(5, 197, 133);
-        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+        box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.2);
 
         h1{
             display: flex;

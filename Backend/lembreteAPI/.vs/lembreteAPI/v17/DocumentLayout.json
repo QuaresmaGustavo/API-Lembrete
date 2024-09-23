@@ -1,14 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\quare\\source\\repos\\lembreteAPI\\",
+  "WorkspaceRootPath": "C:\\Users\\quare\\.vscode\\Projetos\\Csharp\\API-Lembrete\\Backend\\lembreteAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B286F322-D381-4F29-ACE3-14BDB74E8873}|lembreteAPI\\lembreteAPI.csproj|c:\\users\\quare\\source\\repos\\lembreteapi\\lembreteapi\\controllers\\lembretecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B286F322-D381-4F29-ACE3-14BDB74E8873}|lembreteAPI\\lembreteAPI.csproj|c:\\users\\quare\\.vscode\\projetos\\csharp\\api-lembrete\\backend\\lembreteapi\\lembreteapi\\controllers\\lembretecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B286F322-D381-4F29-ACE3-14BDB74E8873}|lembreteAPI\\lembreteAPI.csproj|solutionrelative:lembreteapi\\controllers\\lembretecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B286F322-D381-4F29-ACE3-14BDB74E8873}|lembreteAPI\\lembreteAPI.csproj|c:\\users\\quare\\source\\repos\\lembreteapi\\lembreteapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B286F322-D381-4F29-ACE3-14BDB74E8873}|lembreteAPI\\lembreteAPI.csproj|c:\\users\\quare\\.vscode\\projetos\\csharp\\api-lembrete\\backend\\lembreteapi\\lembreteapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B286F322-D381-4F29-ACE3-14BDB74E8873}|lembreteAPI\\lembreteAPI.csproj|solutionrelative:lembreteapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B286F322-D381-4F29-ACE3-14BDB74E8873}|lembreteAPI\\lembreteAPI.csproj|c:\\users\\quare\\.vscode\\projetos\\csharp\\api-lembrete\\backend\\lembreteapi\\lembreteapi\\service\\lembreteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B286F322-D381-4F29-ACE3-14BDB74E8873}|lembreteAPI\\lembreteAPI.csproj|solutionrelative:lembreteapi\\service\\lembreteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,31 +22,54 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\quare\\source\\repos\\lembreteAPI\\lembreteAPI\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\quare\\.vscode\\Projetos\\Csharp\\API-Lembrete\\Backend\\lembreteAPI\\lembreteAPI\\Program.cs",
               "RelativeDocumentMoniker": "lembreteAPI\\Program.cs",
-              "ToolTip": "C:\\Users\\quare\\source\\repos\\lembreteAPI\\lembreteAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\quare\\.vscode\\Projetos\\Csharp\\API-Lembrete\\Backend\\lembreteAPI\\lembreteAPI\\Program.cs",
               "RelativeToolTip": "lembreteAPI\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAxAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T00:52:36.93Z"
+              "WhenOpened": "2024-04-22T00:52:36.93Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "LembreteController.cs",
-              "DocumentMoniker": "C:\\Users\\quare\\source\\repos\\lembreteAPI\\lembreteAPI\\Controllers\\LembreteController.cs",
+              "DocumentMoniker": "C:\\Users\\quare\\.vscode\\Projetos\\Csharp\\API-Lembrete\\Backend\\lembreteAPI\\lembreteAPI\\Controllers\\LembreteController.cs",
               "RelativeDocumentMoniker": "lembreteAPI\\Controllers\\LembreteController.cs",
-              "ToolTip": "C:\\Users\\quare\\source\\repos\\lembreteAPI\\lembreteAPI\\Controllers\\LembreteController.cs",
+              "ToolTip": "C:\\Users\\quare\\.vscode\\Projetos\\Csharp\\API-Lembrete\\Backend\\lembreteAPI\\lembreteAPI\\Controllers\\LembreteController.cs",
               "RelativeToolTip": "lembreteAPI\\Controllers\\LembreteController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAJAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACMAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T13:15:24.404Z",
+              "WhenOpened": "2024-09-23T22:24:52.13Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LembreteService.cs",
+              "DocumentMoniker": "C:\\Users\\quare\\.vscode\\Projetos\\Csharp\\API-Lembrete\\Backend\\lembreteAPI\\lembreteAPI\\Service\\LembreteService.cs",
+              "RelativeDocumentMoniker": "lembreteAPI\\Service\\LembreteService.cs",
+              "ToolTip": "C:\\Users\\quare\\.vscode\\Projetos\\Csharp\\API-Lembrete\\Backend\\lembreteAPI\\lembreteAPI\\Service\\LembreteService.cs",
+              "RelativeToolTip": "lembreteAPI\\Service\\LembreteService.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAxwCQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T21:51:51.715Z",
               "EditorCaption": ""
             }
           ]

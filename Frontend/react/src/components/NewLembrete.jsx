@@ -10,7 +10,7 @@ const CardLembrete = styled.div`
   border: solid gray 0.1rem;
   border-radius: 1rem;
   background: rgb(47, 152, 194);
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.2);
 
   h1{
     border-bottom: solid rgba(0, 0, 0, 0.2) 0.1rem;
@@ -24,7 +24,7 @@ const Button = styled.button`
   font-weight: 500;
   background-color: rgb(255, 255, 255);
   cursor: pointer;
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.2);
 
    &:hover {
     background-color: rgb(145, 145, 145);
@@ -63,7 +63,7 @@ function NewLembrete() {
   const postLembrete = async () => {
     if (inputNome && inputData != '') {
       try {
-        await fetch('http://localhost:5260/insert', {
+        await fetch('http://localhost:5260/api/Lembretes', {
           method: 'POST',
           headers: { 'content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
           body: JSON.stringify({

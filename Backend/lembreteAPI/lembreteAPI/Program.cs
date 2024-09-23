@@ -1,12 +1,14 @@
 using APIlembrete.Data;
-using lembreteAPI;
+using lembreteAPI.Service;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-var connection = builder.Configuration.GetConnectionString("ConnectionMysql");
-builder.Services.AddDbContext<LembreteDbcontext>(x => x.UseMySql(connection, Microsoft.EntityFrameworkCore.ServerVersion.Parse("10.4.32-MariaDB")));
+builder.Services.AddDbContext<LembreteDbcontext>(options => options.UseMySql(builder.Configuration.GetConnectionString("ConnectionMysql"),
+                     new MySqlServerVersion(new Version(8, 0, 21))));
+
+builder.Services.AddScoped<LembreteService>();
 
 builder.Services.AddControllers();
 
@@ -36,8 +38,6 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
-
-
 
 app.UseCors("CorsPolicy");
 
